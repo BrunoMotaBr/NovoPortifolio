@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*{
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #EFECEC;
+    transform: 2s;
+
+}
+
+.quadrado{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 100%;
+    background-color: #5877FF;
+}
+.quadrado:first-child{
+    position: absolute;
+    width: 510px;
+    height: 510px;
+    border-radius: 100%;
+    background-color: #000000;
+}
+
+.quadradoFoto{
+    width: 500px;
+    height: 500px;
+    border-radius: 100%;
+    position: relative;
+    animation: movimento 7.5s infinite;
+}
+
+.principal{
+    width: 80%;
+    height: 70vh;
+    margin: 0 auto;
+    margin-top: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.titulo--de--destaque{
+    text-align: center;
+    font-weight: 400;
+    padding: 1em 0.2em;
+}
+
+.texto--simples{
+    font-weight: 100;
+    text-align: center;
+    font-size: 18px;
+}
+
+.botoes-alinhados{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-around;
+    padding: 1em 0.5em;
+}
+
+.botoes-alinhados a{
+    text-decoration: none;
+    color: #000000;
+    padding: 0.7em 4em;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 0.9;
+    transform: 1s;
+}
+
+.botoes-alinhados a:hover{
+    opacity: 1;
+    transform: 1s;
+}
+
+.botoes-alinhados a:first-child{
+    color: #ECECEC;
+    background-color: #000000;
+}
+
+.botoes-alinhados a:last-child{
+    color: #FFFFFF;
+    background-color: #5877FF;
+}
+
+.destaques{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+    max-width: 80%;
+    margin: 2em auto;
+    gap: 15px;
+}
+
+.destaques div{
+    min-width: 30%;
+}
+
+@keyframes movimento {
+    0% {
+        transform: translate(0, 0);
+    }
+    
+    50% {
+        transform: translate(0, 10px);
+    }
+
+    75% {
+        transform: translate(10px, 0);
+    }
+}
+
+@media (max-width: 1000px) {
+    .principal{
+        flex-wrap: wrap;
+    }
+}
